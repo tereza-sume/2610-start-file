@@ -1,0 +1,48 @@
+// Primary Color Palette
+
+$color-primary: #384838;
+$color-secondary: #E54413;
+$color-accent: #F29F05;
+$color-old-lace: #F4EDDD;
+
+
+// Neutral Grey Scale
+
+$color-grey-05: #F7F5F1;
+$color-grey-10: #E9E6E0;
+$color-grey-20: #D6D2CB;
+$color-grey-30: #BDB8AF;
+$color-grey-40: #9D978D;
+$color-grey-50: #7D786F;
+$color-grey-60: #615D57;
+$color-grey-70: #47443F;
+$color-grey-80: #292825;
+
+
+// Font family 
+
+$font-family: "Urbanist", sans-serif;
+$font-weight-thin: 400;
+$font-weight-normal: 500;
+$font-weight-heavy: 700;
+
+$secondary-font: "rafaella", serif;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Breakpoint 
+$break-point: 46rem;
+
+// Layout
+$gutter: 10px;
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+@mixin img-shadow-1 {
+    display: block;
+    border: solid 1px $color-grey-30;
+    box-shadow: 1px 1px 6px $color-grey-30;
+}

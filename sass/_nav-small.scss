@@ -1,0 +1,59 @@
+/************************** IMPORT VARIABLES **************************/
+@use "variables" as *;
+
+/************************** HAMBURGER **************************/
+.hamburger-button {
+  background: none;
+  border: none;
+  color: $color-grey-70;
+  cursor: pointer;
+  font-family: Verdana;
+  font-size: 2rem;
+}
+
+.hamburger-button::before {
+  content: "\2630";
+}
+
+.hamburger-button.open::before {
+  content: "\00D7";
+}
+
+
+
+/************************** NAVIGATION **************************/
+.site-nav {
+  @include reset;
+  list-style-type: none;
+  font-family: Verdana;
+  background-color: $color-grey-05;
+  display: none;
+}
+
+
+// Show and hide the menu
+.site-nav.open {
+  display: block;
+}
+
+// Style the Anchors
+.site-nav a {
+  display: block;
+  text-decoration: none;
+  color: $color-grey-80;
+  padding: .75rem $gutter;
+  text-transform: uppercase;
+  font-size: .8rem;
+  border-bottom: 1px solid $color-grey-20;
+  transition: background-color .3s ease;
+  &:hover {
+    background-color: $color-grey-80;
+    color:$color-grey-10;
+  }
+}
+
+
+//Style the current menu item
+.active>a {
+  color: $color-primary;
+}
