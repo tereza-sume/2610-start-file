@@ -423,6 +423,10 @@ header img {
   background-color: #E54413;
   color: #F4EDDD;
 }
+.site-nav a.active {
+  background-color: #E54413;
+  color: #F4EDDD;
+}
 
 /************************** MAIN LAYOUT **************************/
 .hero-section {
@@ -486,6 +490,74 @@ header img {
 .hero-section .hero-content .hero-button:focus-visible {
   outline: 2px solid white;
   outline-offset: 3px;
+}
+
+.quick-links {
+  background-color: #F7F5F1;
+  padding: 3.5rem 1.25rem;
+}
+.quick-links .quick-links-container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.quick-links h2 {
+  color: #384838;
+  font-family: "Urbanist", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+.quick-links p {
+  color: #384838;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2rem;
+}
+
+.quick-links-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.quick-links-list li {
+  margin: 0;
+}
+.quick-links-list a {
+  align-items: center;
+  background-color: #F4EDDD;
+  border-left: 4px solid #E54413;
+  border-radius: 0.5rem;
+  color: #384838;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  gap: 1rem;
+  min-height: 5rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.quick-links-list a:hover {
+  background-color: #384838;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  color: #F4EDDD;
+  transform: translateY(-3px);
+}
+.quick-links-list a:focus-visible {
+  outline: 3px solid #F29F05;
+  outline-offset: 3px;
+}
+.quick-links-list .icon {
+  background-color: #fff;
+  border-radius: 50%;
+  box-sizing: content-box;
+  flex-shrink: 0;
+  height: 2rem;
+  padding: 0.6rem;
+  width: 2rem;
 }
 
 /****************************** FOOTER ******************************/
@@ -587,20 +659,39 @@ footer .footer-links a:focus-visible {
   outline: 2px solid #E54413;
   outline-offset: 5px;
 }
-footer .footer-contact p {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
+footer .footer-contact a,
+footer .footer-bottom a {
+  color: #F4EDDD;
+  text-decoration-color: rgba(244, 237, 221, 0.5);
+  text-underline-offset: 4px;
+  transition: color 0.25s ease;
 }
-footer .footer-bottom {
-  width: 100%;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(244, 237, 221, 0.3);
-  text-align: center;
+footer .footer-contact a:hover,
+footer .footer-bottom a:hover {
+  color: #E54413;
+}
+footer .footer-contact a:focus-visible,
+footer .footer-bottom a:focus-visible {
+  outline: 2px solid #E54413;
+}
+footer .footer-contact a {
+  text-decoration: none;
+}
+footer .footer-contact a:focus-visible {
+  outline-offset: 4px;
 }
 footer .footer-bottom p {
-  margin: 0;
-  font-size: 0.8rem;
+  line-height: 1.8;
+}
+footer .footer-bottom a {
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+footer .footer-bottom a:focus-visible {
+  outline-offset: 3px;
+}
+footer .footer-bottom a:first-of-type {
+  margin-left: 0.5rem;
 }
 
 /************************** IMPORT VARIABLES **************************/

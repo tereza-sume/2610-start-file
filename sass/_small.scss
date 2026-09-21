@@ -46,6 +46,11 @@ header {
       background-color: $color-secondary;
       color: $color-old-lace;
     }
+
+    &.active {
+      background-color: $color-secondary;
+      color: $color-old-lace;
+    }
   }
 }
 
@@ -121,6 +126,86 @@ header {
         outline-offset: 3px;
       }
     }
+  }
+}
+
+.quick-links {
+  background-color: $color-grey-05;
+  padding: 3.5rem 1.25rem;
+
+  .quick-links-container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  h2 {
+    color: $color-primary;
+    font-family: $font-family;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin: 0 0 0.75rem;
+  }
+
+  p {
+    color: $color-primary;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 0 2rem;
+  }
+}
+
+.quick-links-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    align-items: center;
+    background-color: $color-old-lace;
+    border-left: 4px solid $color-secondary;
+    border-radius: 0.5rem;
+    color: $color-primary;
+    display: flex;
+    font-size: 1rem;
+    font-weight: $font-weight-heavy;
+    gap: 1rem;
+    min-height: 5rem;
+    padding: 1rem 1.25rem;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      box-shadow 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      background-color: $color-primary;
+      box-shadow: 0 6px 16px rgb(0 0 0 / 15%);
+      color: $color-old-lace;
+      transform: translateY(-3px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid $color-accent;
+      outline-offset: 3px;
+    }
+  }
+
+  .icon {
+    background-color: #fff;
+    border-radius: 50%;
+    box-sizing: content-box;
+    flex-shrink: 0;
+    height: 2rem;
+    padding: 0.6rem;
+    width: 2rem;
   }
 }
 
@@ -249,23 +334,48 @@ footer {
     }
   }
 
+  .footer-contact a,
+  .footer-bottom a {
+    color: $color-old-lace;
+    text-decoration-color: rgba($color-old-lace, 0.5);
+    text-underline-offset: 4px;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: $color-secondary;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-secondary;
+    }
+  }
+
   .footer-contact {
-    p {
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      line-height: 1.5;
+    a {
+      text-decoration: none;
+
+      &:focus-visible {
+        outline-offset: 4px;
+      }
     }
   }
 
   .footer-bottom {
-    width: 100%;
-    padding-top: 1rem;
-    border-top: 1px solid rgba($color-old-lace, 0.3);
-    text-align: center;
-
     p {
-      margin: 0;
-      font-size: 0.8rem;
+      line-height: 1.8;
+    }
+
+    a {
+      margin: 0 0.25rem;
+      text-decoration: none;
+
+      &:focus-visible {
+        outline-offset: 3px;
+      }
+
+      &:first-of-type {
+        margin-left: 0.5rem;
+      }
     }
   }
 }

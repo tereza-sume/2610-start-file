@@ -1,64 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> River City</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concept Page | River City</title>
+  <meta property="og:title" content="River City Concept Page" />
+  <meta property="og:description" content="River City Concept Page." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="River City" />
 
   <!-- STYLESHEETS -->
-  <link rel="stylesheet" href="styles/styles.min.css">
-
+  <link rel="stylesheet" href="styles/styles.min.css" />
 
   <!-- GOOGLE FONT -->
-  <link rel="stylesheet" href="https://use.typekit.net/phg7mxz.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://use.typekit.net/phg7mxz.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 
   <!-- FAV ICON LINKS -->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="icon" href="favicon.ico">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=3" />
 
   <!-- SCRIPTS -->
   <script src="scripts/year.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
-
 </head>
 
 <body>
-
   <!-----------------------------HEADER-------------------------->
   <header>
-    <img src="images/logo01.svg" alt="River City logo">
-    <button class="hamburger-button" aria-label="navigation links"></button>
+    <a href="index.html"><img src="images/logo01.svg" alt="River City logo" /></a>
+    <button class="hamburger-button" type="button" aria-label="open navigation menu" aria-controls="main-navigation"
+      aria-expanded="false"></button>
   </header>
   <!-----------------------------NAVIGATION-------------------------->
-  <nav>
+  <nav id="main-navigation" class="site-navigation" aria-label="Main Navigation">
     <ul class="site-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Government</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Our Story</a></li>
+      <li>
+        <a href="index.html" class="active" aria-current="page">Home</a>
+      </li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="government.html">Government</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
     </ul>
   </nav>
   <main>
     <!-----------------------------HERO SECTION-------------------------->
     <section class="hero-section">
-      <img src="photos/heroimage.webp" alt="A scenic view of River City">
+      <img src="photos/heroimage.webp" alt="A scenic view of River City" />
       <div class="hero-content">
         <h1>Welcome to River City</h1>
         <p>Your place to live.</p>
         <a class="hero-button" href="#">Explore</a>
+      </div>
+    </section>
+
+    <!-----------------------------QUICK LINKS SECTION-------------------------->
+    <section class="quick-links">
+      <div class="quick-links-container">
+        <h2>Find What You Need</h2>
+        <p>Access the services and resources here</p>
+        <h3>Most Requested</h3>
+        <ul class="quick-links-list">
+          <li>
+            <a href="pay-utility-bill">
+              <img class="icon" src="images/card-outline.svg" alt="" aria-hidden="true" />
+              <span>Pay a Utility Bill</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="report-issue">
+              <img class="icon" src="images/alert-circle-outline.svg" alt="" aria-hidden="true" />
+              <span>Report an Issue</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="apply-permit">
+              <img class="icon" src="images/document-text-outline.svg" alt="" aria-hidden="true" />
+              <span>Apply for a Permit</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="parks-recreation">
+              <img class="icon" src="images/leaf-outline.svg" alt="" aria-hidden="true" />
+              <span>Parks &amp; Recreation</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="trash-recycling">
+              <img class="icon" src="images/trash-outline.svg" alt="" aria-hidden="true" />
+              <span>Trash &amp; Recycling</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="community-events">
+              <img class="icon" src="images/people-outline (1).svg" alt="" aria-hidden="true" />
+              <span>Community Events</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -96,10 +152,13 @@
         <h2>Contact</h2>
         <p>123 River City Street</p>
         <p>River City, AA 00000</p>
-        <p>(000)000-0000</p>
+        <p><a href="mailto:info@rivercity.com">info@rivercity.com</a></p>
+        <p><a href="tel:(000)000-0000">(000)000-0000</a></p>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> All rights reserved.</p>
+        <p>&copy; <span id="year"></span> River City. All rights reserved.<a href="#">Privacy Policy</a> | <a
+            href="#">Terms of
+            Use</a> | <a href="#">Clients</a></p>
       </div>
     </div>
   </footer>
